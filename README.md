@@ -25,7 +25,7 @@ Here you can find a light sample of how to integrate React and .Net by a simple 
 
 ### :fire: Using Best Practisces
 
-## live demo for react app: 
+-- ## live demo for react app:
 
 
 
