@@ -1,0 +1,50 @@
+﻿{
+    "translation": {},
+
+    "app-title": {
+        "Startup": "Iran Procurement Network",
+        "Dashboard": "Iran Procurement Network",
+        "UserProfile": "User Profile",
+        "": ""
+    },
+    "messages": {},
+
+    "common": {
+        "change-status-to-QUAL":"Change status to approved",
+        "change-status-to-RJCT":"Change status to rejected",
+        "you-are-changing-status-to-disc-pub":"You are changing discovery status to publish",
+        "this-business-has-activated-srm-in-its-network": "This business has activated SRM in its network",
+        "profile-improvement-hint": "Having a logo in the company profile, creating communication channels through phone, email and workplace address, describing your business activities, as well as accurately specifying the goods and services you provide, will greatly help in accepting your cooperation request.",
+        "improve-your-business-profile": "Complete your business profile to be seen better in the network and have more customers.",
+        "srm-hint": "Companies that have a supplier management module can periodically evaluate you by sending a questionnaire",
+        "active-events": "Active Events",
+        "respond-to-events": "Respond to Events",
+        "awaiting-your-approval": "Awaiting your approval",        
+        "you-are-changing-status-to-event-bpub": "you-are-changing-status-to-publish",
+        "you-are-changing-status-to-event-bClose": "you-are-changing-status-to-close",
+        "you-are-changing-status-to-event-bGrade": "you-are-changing-status-to-grade",
+        "you-are-changing-status-to-event-bDrft": "you-are-changing-status-to-draft",
+        "advantage1-title": "Bigger market and more sales",
+        "advantage1-text": "You can communicate online with buyers and other companies throughout Iran. The supply network allows you to reach a larger market and connect with new customers.",
+
+        "advantage2-title": "Improving the procurement process",
+        "advantage2-text": "By using the supply network platform, you can improve and optimize your procurement process. In this way, you will reduce the number of errors and reduce the time required to complete the procurement process, which will reduce costs as a result.",
+
+        "advantage3-title": "Increasing transparency and reducing risk",
+        "advantage3-text": "By using the supply network platform, you can communicate with your customers online and make the procurement process more transparent. This reduces procurement risks and reduces costs such as legal fees and court cases.",
+
+        "for-buyers-text": "After registering as a buyer, all large and small businesses can enter the large network of Iran Khodro suppliers and easily find and manage the service providers and contractors they need. Buyers can implement and control the standard process of sourcing to payment in this system. This system includes the following modules:",
+        "register-buyer-paragraph1": "Registration of buyers and consumers is only possible for legal entities and it is done after verifying their identity and confirming their eligibility.",
+        "register-buyer-paragraph2": "For more information, contact @supportTel",
+        "welcome-message": "By connecting to this network, we will connect you to thousands of business opportunities available in Iran Khodro industrial group. You can easily participate in tenders and become one of thousands of Iran Khodro suppliers.",
+        "welcome-title": "Connect to Iran Khodro procurement network",
+        "kn-project": "Knowledge Project",
+        "supws-project": "Supplier worksapce",
+        "req-project": "Sourcing Request",
+        "puws-project": "Sourcing Project"
+    },
+
+    "home-dashboard": {
+        "complete-your-company-profile-to-increase-your-chances-of-being-discovered-by-new-buyers": "Complete your company profile to increase your chances of being discovered by new buyers."
+    }
+}
