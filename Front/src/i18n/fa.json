@@ -1,11 +1,6 @@
 ﻿{
-    "app-title": {
-        "Login": "ورود به سایت",
-        "Register": "ثبت نام",
-        "UserProfile": "پروفایل كاربر"
-    },
-
     "common": {
-        "company-currency": "واحد ارز شركت :"
+        "login": "ورود",
+        "register": "ثبت نام"
     }
 }
