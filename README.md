@@ -10,6 +10,8 @@ Here you can find a light sample of how to integrate React and .Net by a simple 
     ✅ Redux ToolKit
     ✅ I18next (for supporting multi language)
     ✅ React Router Dom
+    ✅ Formik (for maiking forms)
+    ✅ Yup (for validating values)
      
 
 ⚡ .Net 9
