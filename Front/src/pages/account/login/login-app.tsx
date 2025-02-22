@@ -2,6 +2,7 @@ import { ArrowLeftCircleIcon, BackspaceIcon, BackwardIcon, UserIcon } from '@her
 import { T } from '../../../components/basic/text';
 import { TProvider } from '../../../i18n';
 import { useNavigate } from 'react-router-dom';
+import Button from '../../../components/ui/button';
 
 export default function LoginApp() {
     const navigate = useNavigate();
@@ -29,9 +30,7 @@ export default function LoginApp() {
                             <span className=" text-gray-500">Username:</span>
                             <input
                                 type="text"
-                                className="mt-2 shoadow border border-slate-200 text-sm rounded w-full py-2 px-3 text-gray-700
-                            leading-flight 
-                            "
+                                className="mt-2 shoadow border border-slate-200 text-sm rounded w-full py-2 px-3 text-gray-700 leading-flight"
                             />
                         </div>
 
@@ -39,23 +38,14 @@ export default function LoginApp() {
                             <span className="text-gray-500">Password:</span>
                             <input
                                 type="password"
-                                className="mt-2 shoadow border border-slate-200 text-sm w-full py-2 px-3 text-gray-700
-                            leading-flight rounded-md
-                            "
+                                className="mt-2 shoadow border border-slate-200 text-sm w-full py-2 px-3 text-gray-700 leading-flight rounded-md"
                             />
                         </div>
 
                         <div className="px-3 mt-8">
                             <div className="flex flex-row gap-2 items-centermb-3">
-                                <button
-                                    onClick={() => navigate('/dashboard')}
-                                    className="px-3 py-2 text-sm bg-indigo-500 hover:bg-indigo-800 text-gray-100 rounded-sm shadow hover:shadow-md cursor-pointer transition duration-300">
-                                    Login
-                                </button>
-
-                                <button className="px-3 py-2 text-sm border border-gray-200 cursor-pointer hover:bg-gray-200 transition duration-200">
-                                    Reset password
-                                </button>
+                                <Button color="primary" onClick={() => {}} size="sm" variant="outline" title="Login" />
+                                <Button color="info" onClick={() => {}} size="sm" variant="outline" title="Reset Password" />
                             </div>
                             <div className="my-3">
                                 <span className="text-sm text-stone-400 ">If you dont have account, register</span>

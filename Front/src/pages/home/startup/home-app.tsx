@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import Navigation from '../../../components/ui/navigation';
+import RoundedPill from '../../../components/ui/rounded-pill';
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 export default function HomeApp() {
@@ -20,13 +21,12 @@ export default function HomeApp() {
                 </div>
                 <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
                     <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                        <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                            Announcing our next round of funding.{' '}
-                        </div>
+                        <RoundedPill title="multi language" />
+                        <RoundedPill title="dark mode" />
                     </div>
                     <div className="text-center">
-                        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Simple React Sample</h1>
-                        <p className="mt-6 text-lg leading-8 text-gray-600">Find how to build a simple react application</p>
+                        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">To Do App</h1>
+                        <p className="mt-6 text-lg leading-8 text-gray-600">A simple react application and .Net API</p>
                         <div className="mt-10 flex items-center justify-center gap-x-6">
                             <a
                                 href="#"
