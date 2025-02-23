@@ -1,8 +1,10 @@
+import * as Yup from 'yup';
 import { ArrowLeftCircleIcon, BackspaceIcon, BackwardIcon, UserIcon } from '@heroicons/react/24/outline';
 import { T } from '../../../components/basic/text';
 import { TProvider } from '../../../i18n';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../../components/ui/button';
+import { ErrorMessage, Field, Form, Formik } from 'formik';
 
 export default function LoginApp() {
     const navigate = useNavigate();
@@ -26,21 +28,8 @@ export default function LoginApp() {
                         <div className="p-2 border-b border-stone-200 text-black rounded-t-xl flex gap-2 align-middle items-center">
                             <UserIcon className="h-6 w-6 stroke-2" /> <T className="text-2xl font-bold">Login</T>
                         </div>
-                        <div className="mt-3 mx-3 pb-3 flex flex-col">
-                            <span className=" text-gray-500">Username:</span>
-                            <input
-                                type="text"
-                                className="mt-2 shoadow border border-slate-200 text-sm rounded w-full py-2 px-3 text-gray-700 leading-flight"
-                            />
-                        </div>
 
-                        <div className="mt-3 mx-2 pb-3 flex flex-col">
-                            <span className="text-gray-500">Password:</span>
-                            <input
-                                type="password"
-                                className="mt-2 shoadow border border-slate-200 text-sm w-full py-2 px-3 text-gray-700 leading-flight rounded-md"
-                            />
-                        </div>
+                        <LoginForm />
 
                         <div className="px-3 mt-8">
                             <div className="flex flex-row gap-2 items-centermb-3">
@@ -68,3 +57,44 @@ export default function LoginApp() {
         </TProvider>
     );
 }
+
+const LoginForm = () => (
+    <>
+        <Formik
+            initialValues={{ username: '', password: '' }}
+            validationSchema={Yup.object({
+                username: Yup.string().max(15, 'Must be 15 characters or less').required('Required'),
+                password: Yup.string().max(20, 'Must be 20 characters or less').required('Required'),
+            })}
+            onSubmit={(values, { setSubmitting }) => {
+                debugger;
+                setTimeout(() => {
+                    alert(JSON.stringify(values, null, 2));
+                    setSubmitting(false);
+                }, 400);
+            }}>
+            {(formik) => (
+                <Form>
+                    <div className="mt-3 mx-3 pb-3 flex flex-col">
+                        <span className=" text-gray-500">Username:</span>
+                        <Field
+                            name="username"
+                            type="text"
+                            className="mt-2 shoadow border border-slate-200 text-sm rounded w-full py-2 px-3 text-gray-700 leading-flight"
+                        />
+                        <ErrorMessage name="username" />
+                    </div>
+                    <div className="mt-3 mx-2 pb-3 flex flex-col">
+                        <span className="text-gray-500">Password:</span>
+                        <Field
+                            name="password"
+                            type="password"
+                            className="mt-2 shoadow border border-slate-200 text-sm w-full py-2 px-3 text-gray-700 leading-flight rounded-md"
+                        />
+                        <ErrorMessage name="password" />
+                    </div>
+                </Form>
+            )}
+        </Formik>
+    </>
+);
