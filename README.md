@@ -13,7 +13,6 @@ Here you can find a light sample of how to integrate React and .Net by a simple 
     ✅ Formik (for maiking forms)
     ✅ Yup (for validating values)
      
-
 ⚡ .Net 9
 
     ✅ Minimal Api
