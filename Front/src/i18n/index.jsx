@@ -42,7 +42,7 @@ i18n.use(LanguageDetector)
     .init({
         resources: { en: dic, fa },
         fallbackLng: 'en',
-        fallbackNS: ['common', 'messages', 'app-title'],
+        fallbackNS: ['common', 'messages'],
         saveMissing: true,
         debug: code.isDevelopmentEnv(),
 
