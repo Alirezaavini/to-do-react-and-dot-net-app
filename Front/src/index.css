@@ -1,13 +1,15 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+
 
 @font-face {
-  font-family: "Vazir";
-  font-style: normal;
-  font-weight: 200 700;
-  font-display: swap;
-  src: url("../public/fonts/Vazir.woff2") format("woff2");
+    font-family: 'Vazir';
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url('../public/fonts/Vazir.woff2') format('woff2');
 }
 
 .vazir-font {
-  font-family: "Vazir";
+    font-family: 'Vazir';
 }

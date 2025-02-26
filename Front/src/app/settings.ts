@@ -17,6 +17,7 @@ export const settings = {
     logMissings: () => console.log(JSON.stringify(settings.missingTranslations, null, 2)),
 
     getLanguageCode: () => getCookie('i18next'),
+    getDarkMode: () => localStorage.theme,
     getAppVersion: () => {
         var appInfo = localStorage.getItem('appinfo');
         try {

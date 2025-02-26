@@ -1,6 +1,6 @@
 import { LanguageIcon } from '@heroicons/react/24/outline';
 import { T } from './text';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import settings from '../../app/settings';
 import i18next from 'i18next';
 import { useLayoutDirection } from '../../app/LayoutDirectionContext';
@@ -16,6 +16,10 @@ function SelectLanguage() {
         toggleDirection(lang === 'fa');
         setCurrentLanguageCode(lang);
     };
+
+    useEffect(() => {
+        changeLanguage(settings.getLanguageCode() ?? defaultLanguageCode);
+    }, []);
 
     return (
         <div className="flex flex-row gap-2 align-middle items-center">

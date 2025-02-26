@@ -1,7 +1,9 @@
 import { Dialog, DialogPanel } from '@headlessui/react';
-import { XMarkIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import { TProvider } from '../../i18n';
+import { useNavigate } from 'react-router-dom';
+import SelectDarkMode from '../basic/select-dark-mode';
 
 const navigation = [
     { name: 'Product', href: '#' },
@@ -12,11 +14,11 @@ const navigation = [
 
 export default function Navigation() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+    const navigate = useNavigate();
     return (
         <TProvider>
             <header className="absolute inset-x-0 top-0 z-50">
-                {/* <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
+                <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
                     <div className="flex lg:flex-1">
                         <a href="#" className="-m-1.5 p-1.5">
                             <span className="sr-only">Your Company</span>
@@ -33,18 +35,16 @@ export default function Navigation() {
                         </button>
                     </div>
                     <div className="hidden lg:flex lg:gap-x-12">
-                        {navigation.map((item) => (
+                        {/* {navigation.map((item) => (
                             <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
                                 {item.name}
                             </a>
-                        ))}
+                        ))} */}
                     </div>
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                        <a onClick={() => navigate('/login')} className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer">
-                            Login <span aria-hidden="true">&rarr;</span>
-                        </a>
+                        <SelectDarkMode />
                     </div>
-                </nav> */}
+                </nav>
                 <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
                     <div className="fixed inset-0 z-50" />
                     <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
