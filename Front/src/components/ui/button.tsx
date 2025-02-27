@@ -9,11 +9,12 @@ type buttonInputProps = {
 };
 
 function Button({ classNames, title, disabled = false, onClick, variant = 'contained', color = 'primary', size = 'sm' }: buttonInputProps) {
-    let customClassNames = 'px-3 py-2 rounded-sm hover:shadow-md cursor-pointer transition duration-300';
+    let customClassNames =
+        'px-3 py-2 rounded-sm hover:shadow-md cursor-pointer transition duration-300 focus-visible:outline-2 focus-visible:outline-offset-2';
 
     switch (color) {
         case 'info':
-            customClassNames += '  border border-gray-200 ';
+            customClassNames += 'border border-gray-200 ';
 
             break;
         case 'secondary':
@@ -23,7 +24,7 @@ function Button({ classNames, title, disabled = false, onClick, variant = 'conta
             break;
     }
 
-    if (variant === 'outline') customClassNames += ' border';
+    if (variant === 'outline') customClassNames += ' dark:text-gray-200 dark:hover:bg-gray-600';
 
     switch (size) {
         case 'sm':
