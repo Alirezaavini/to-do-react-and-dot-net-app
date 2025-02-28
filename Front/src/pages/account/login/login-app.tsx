@@ -124,11 +124,11 @@ const LoginTopSection = () => {
             <div className="flex flex-row gap-2 align-middle items-center" onClick={() => navigate('/')}>
                 {isRtl ? (
                     <>
-                        <ArrowRightCircleIcon className="h-6 w-6 md:h-5 md:w-5 stroke-2 " /> <span>Back</span>
+                        <ArrowRightCircleIcon className="h-6 w-6 md:h-5 md:w-5 stroke-2 " /> <T>Back</T>
                     </>
                 ) : (
                     <>
-                        <ArrowLeftCircleIcon className="h-6 w-6 md:h-5 md:w-5 stroke-2 " /> <span>Back</span>
+                        <ArrowLeftCircleIcon className="h-6 w-6 md:h-5 md:w-5 stroke-2 " /> <T>Back</T>
                     </>
                 )}
             </div>
