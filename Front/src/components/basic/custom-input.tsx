@@ -20,7 +20,7 @@ function CustomTextInput({ label, ...props }: inputProps) {
                 {label}
             </label>
             <input
-                className={`mt-2 leading-flight rounded-md ring-1 ring-inset py-1.5 px-2 focus:ring-indigo-600 ${
+                className={`mt-2 focus:outline-1 focus:outline-gray-500 outline-0 dark:shadow-sm dark:ring-white/10 leading-flight rounded-md ring-1 ring-inset py-1.5 px-2 focus:ring-indigo-600 dark:border-0 dark:focus:ring-0 dark:bg-transparent ${
                     !meta.error && 'ring-gray-300 dark:text-gray-300 sm:text-sm'
                 }
                 ${meta.touched && !meta.error && 'ring-green-500 '}

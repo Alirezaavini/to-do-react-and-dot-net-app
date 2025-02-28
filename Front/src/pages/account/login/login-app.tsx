@@ -27,9 +27,9 @@ export default function LoginApp() {
 
     return (
         <TProvider>
-            <div className=" h-dvh flex justify-center px-1 md:px-5  dark:bg-gray-900 relative isolate ">
+            <div className=" h-dvh flex justify-center px-1 md:px-5 dark:bg-gray-900 relative isolate ">
                 <BlurBackground />
-                <div className="mt-2 flex flex-col align-middle max-h-max w-full max-w-[500px]  md:max-h-[600] ">
+                <div className="mt-2 flex flex-col align-middle max-h-max w-full max-w-[500px] md:max-h-[600] ">
                     <LoginTopSection />
                     <BasicCard
                         title={
