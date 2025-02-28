@@ -9,13 +9,15 @@ import { useRef } from 'react';
 import SelectLanguage from '../../../components/basic/select-language';
 import BasicCard from '../../../components/ui/card';
 import BlurBackground from '../../../components/ui/blur-background';
+import CustomTextInput from '../../../components/basic/custom-input';
 
 export default function LoginApp() {
     const formRef = useRef<any>(null);
-
+    const navigate = useNavigate();
     const onClickLogin = () => {
         var values = formRef.current.values;
         console.log(values);
+        navigate('/dashboard');
     };
 
     const changeLanguage = () => {
@@ -25,16 +27,17 @@ export default function LoginApp() {
 
     return (
         <TProvider>
-            <BlurBackground />
-            <div className=" h-dvh flex justify-center px-1 md:px-5 dark:bg-gray-900">
-                <div className="mt-20 flex flex-col align-middle max-h-max w-full max-w-[500px]  md:max-h-[600]">
+            <div className=" h-dvh flex justify-center px-1 md:px-5  dark:bg-gray-900 relative isolate ">
+                <BlurBackground />
+                <div className="mt-2 flex flex-col align-middle max-h-max w-full max-w-[500px]  md:max-h-[600] ">
                     <LoginTopSection />
                     <BasicCard
                         title={
                             <>
                                 <UserIcon className="h-6 w-6 stroke-2" /> <T className="text-2xl font-bold">login</T>
                             </>
-                        }>
+                        }
+                        classNames="">
                         <LoginForm formRef={formRef} />
 
                         <div className="px-3 mt-8">
@@ -79,22 +82,24 @@ const LoginForm = ({ formRef }: any) => (
             {(formik) => (
                 <Form>
                     <div className="mt-3 mx-3 pb-3 flex flex-col">
-                        <span className=" text-gray-500">Username:</span>
-                        <Field
+                        {/* <span className=" text-gray-500">Username:</span> */}
+                        <CustomTextInput label={<T>username</T>} name="username" type="text" />
+                        {/* <Field
                             name="username"
                             type="text"
                             className="mt-2 shoadow border border-slate-200 text-sm rounded w-full py-2 px-3 text-gray-700 leading-flight"
                         />
-                        <ErrorMessage name="username" />
+                        <ErrorMessage name="username" /> */}
                     </div>
                     <div className="mt-3 mx-2 pb-3 flex flex-col">
-                        <span className="text-gray-500">Password:</span>
+                        {/* <span className="text-gray-500">Password:</span>
                         <Field
                             name="password"
                             type="password"
                             className="mt-2 shoadow border border-slate-200 text-sm w-full py-2 px-3 text-gray-700 leading-flight rounded-md"
                         />
-                        <ErrorMessage name="password" />
+                        <ErrorMessage name="password" /> */}
+                        <CustomTextInput label={<T>password</T>} name="password" type="password" />
                     </div>
                 </Form>
             )}

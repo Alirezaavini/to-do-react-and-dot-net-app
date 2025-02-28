@@ -6,12 +6,12 @@ export type LayoutDirectionType = {
     toggleDirection: (isRtl: boolean) => void;
 };
 
-const LayoutDirectionContext = React.createContext<LayoutDirectionType>({} as any);
+const ThemeContext = React.createContext<LayoutDirectionType>({} as any);
 export const useLayoutDirection = () => {
-    return useContext(LayoutDirectionContext);
+    return useContext(ThemeContext);
 };
 
-export const LayoutDirectionProvider = ({ children }: { children: ReactNode }) => {
+export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const [isRTL, setIsRTL] = useState<boolean>(() => {
         const storedIsRTL = localStorage.getItem('isRTL');
         return storedIsRTL === 'true';
@@ -26,11 +26,11 @@ export const LayoutDirectionProvider = ({ children }: { children: ReactNode }) =
         if (rootHtml) {
             rootHtml.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
         }
+        document.documentElement.classList.toggle(
+            'dark',
+            localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        );
     }, [isRTL]);
 
-    return (
-        <LayoutDirectionContext.Provider value={{ isRtl: isRTL, toggleDirection: toggleLayoutDirection }}>
-            {children}
-        </LayoutDirectionContext.Provider>
-    );
+    return <ThemeContext.Provider value={{ isRtl: isRTL, toggleDirection: toggleLayoutDirection }}>{children}</ThemeContext.Provider>;
 };
