@@ -12,7 +12,7 @@ type inputProps = {
 function CustomTextInput({ label, ...props }: inputProps) {
     const [field, meta] = useField(props);
     const errorClassNames =
-        'ring-1 ring-inset ring-red-500 placeholder:text-red-300 text-red-500 focus:ring-2 focus:ring-inset focus:ring-red-500 sm:text-sm sm:leading-6';
+        'ring-1 ring-inset ring-red-500 placeholder:text-red-300 text-red-500 focus:ring-red-500 sm:text-sm sm:leading-6';
 
     return (
         <>
