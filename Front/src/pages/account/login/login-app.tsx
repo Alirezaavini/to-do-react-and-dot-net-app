@@ -1,5 +1,12 @@
 import * as Yup from 'yup';
-import { ArrowLeftCircleIcon, BackspaceIcon, BackwardIcon, LanguageIcon, UserIcon } from '@heroicons/react/24/outline';
+import {
+    ArrowLeftCircleIcon,
+    ArrowRightCircleIcon,
+    BackspaceIcon,
+    BackwardIcon,
+    LanguageIcon,
+    UserIcon,
+} from '@heroicons/react/24/outline';
 import { T } from '../../../components/basic/text';
 import i18next, { TProvider } from '../../../i18n';
 import { useNavigate } from 'react-router-dom';
@@ -10,6 +17,7 @@ import SelectLanguage from '../../../components/basic/select-language';
 import BasicCard from '../../../components/ui/card';
 import BlurBackground from '../../../components/ui/blur-background';
 import CustomTextInput from '../../../components/basic/custom-input';
+import { useLayoutDirection } from '../../../app/LayoutDirectionContext';
 
 export default function LoginApp() {
     const formRef = useRef<any>(null);
@@ -109,11 +117,20 @@ const LoginForm = ({ formRef }: any) => (
 
 const LoginTopSection = () => {
     const navigate = useNavigate();
+    const { isRtl } = useLayoutDirection();
 
     return (
         <div className="flex flex-row gap-2 mb-2 text-gray-500 dark:text-gray-200 cursor-pointer align-middle justify-between">
             <div className="flex flex-row gap-2 align-middle items-center" onClick={() => navigate('/')}>
-                <ArrowLeftCircleIcon className="h-6 w-6 md:h-5 md:w-5 stroke-2 " /> <span>Back</span>
+                {isRtl ? (
+                    <>
+                        <ArrowRightCircleIcon className="h-6 w-6 md:h-5 md:w-5 stroke-2 " /> <span>Back</span>
+                    </>
+                ) : (
+                    <>
+                        <ArrowLeftCircleIcon className="h-6 w-6 md:h-5 md:w-5 stroke-2 " /> <span>Back</span>
+                    </>
+                )}
             </div>
             <SelectLanguage />
         </div>
