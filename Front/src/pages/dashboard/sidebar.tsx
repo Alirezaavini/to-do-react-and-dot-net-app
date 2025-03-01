@@ -133,7 +133,7 @@ function Sidebar({ sidebarOpen, onChangeSidebar }: SidebarProps) {
                                     <li className="mt-auto">
                                         <a
                                             href="#"
-                                            className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600 darak:text-gray-100  dark:hover:bg-gray-800 dark:hover:text-white">
+                                            className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600 dark:text-gray-200  dark:hover:bg-gray-800 dark:hover:text-white">
                                             <Cog6ToothIcon
                                                 aria-hidden="true"
                                                 className="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600 dark:group-hover:text-white"
@@ -217,7 +217,7 @@ function Sidebar({ sidebarOpen, onChangeSidebar }: SidebarProps) {
                             <li className="mt-auto">
                                 <a
                                     href="#"
-                                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 darak:text-gray-100 hover:text-indigo-700 dark:hover:bg-gray-800 dark:hover:text-white px-4">
+                                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-600 dark:text-gray-400 hover:text-indigo-700 dark:hover:bg-gray-800 dark:hover:text-white px-4">
                                     <Cog6ToothIcon
                                         aria-hidden="true"
                                         className="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600 dark:group-hover:text-white"

@@ -39,7 +39,10 @@ function Button({ classNames, title, disabled = false, onClick, variant = 'conta
     }
 
     return (
-        <button onClick={() => onClick()} disabled={disabled} className={`${classNames} ${customClassNames}`}>
+        <button
+            onClick={() => onClick()}
+            disabled={disabled}
+            className={`${classNames} ${customClassNames} focus:ring-4 focus:ring-gray-400`}>
             {title}
         </button>
     );
