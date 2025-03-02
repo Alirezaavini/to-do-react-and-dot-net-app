@@ -12,19 +12,22 @@ type inputProps = {
 function CustomTextInput({ label, ...props }: inputProps) {
     const [field, meta] = useField(props);
     const errorClassNames =
-        'ring-1 ring-inset ring-red-500 placeholder:text-red-300 text-red-500 focus:ring-red-500 sm:text-sm sm:leading-6';
+        'ring-1 ring-inset ring-red-500 placeholder:text-red-300 text-red-500 focus:ring-red-500 sm:text-sm sm:leading-6 border border-red-200 ';
 
     return (
         <>
-            <label htmlFor={props.id || props.name} className="text-gray-500 ">
+            <label htmlFor={props.id || props.name} className="text-gray-400 ">
                 {label}
             </label>
             <input
-                className={`mt-2 focus:outline-1 focus:outline-gray-500 outline-0 dark:shadow-sm dark:ring-white/10 leading-flight rounded-md ring-1 ring-inset py-1.5 px-2 focus:ring-indigo-600 dark:border-0 dark:focus:ring-0 dark:bg-transparent ${
+                className={`${
+                    meta.touched && meta.error && errorClassNames
+                } mt-2 focus:outline-1 focus:outline-gray-500 dark:bg-gray-700 outline-0 dark:shadow-sm dark:ring-white/30 dark:text-white leading-flight rounded-md ring-1 ring-inset py-2 px-2 dark:border-0 dark:focus:ring-0 ${
                     !meta.error && 'ring-gray-300 dark:text-gray-300 sm:text-sm'
                 }
-                ${meta.touched && !meta.error && 'ring-green-500 '}
-                  ${meta.touched && meta.error && errorClassNames}`}
+                
+                ${meta.touched && !meta.error && ' ring-green-500 '}
+                  `}
                 {...field}
                 {...props}
             />
