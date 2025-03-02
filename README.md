@@ -17,11 +17,13 @@ Here you can find a light sample of how to integrate React and .Net by a simple 
 
     ✅ Minimal Api
     ✅ JWT
+    ✅ Asyncrounous
     ✅ CQRS
     ✅ Entity Framework
     ✅ Rest API
     ✅ Verical Slice Architecture
     ✅ Data Base: Microsoft SQL Server
+    
     
 
 ### :fire: Using Best Practisces
