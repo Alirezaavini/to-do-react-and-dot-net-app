@@ -1,9 +1,7 @@
-import { LanguageIcon } from '@heroicons/react/24/outline';
-import { T } from './text';
+import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
+import { EyeIcon, MoonIcon, SunIcon, UserIcon } from '@heroicons/react/24/outline';
 import { useEffect, useState } from 'react';
 import settings from '../../app/settings';
-import i18next from 'i18next';
-import { useLayoutDirection } from '../../app/LayoutDirectionContext';
 
 function SelectDarkMode() {
     const defaultDarkMode = 'system';
@@ -37,29 +35,43 @@ function SelectDarkMode() {
         );
     }, []);
 
+    function getDarkModelIcont(mode: string) {
+        switch (mode) {
+            case 'dark':
+                return <MoonIcon className="size-5" />;
+            case 'light':
+                return <SunIcon className="size-5" />;
+            case 'system':
+                return <UserIcon className="size-5" />;
+        }
+
+        return <></>;
+    }
+
     return (
         <div className="flex flex-row gap-2 align-middle items-center">
-            <div>
-                <select
-                    id="lang"
-                    name="lang"
-                    onChange={(e) => {
-                        changeDarkModel(e.target.value);
-                    }}
-                    defaultValue={darkMode}
-                    className="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300
-                     focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6 dark:text-gray-200 dark:ring-gray-400 dark:bg-gray-800">
-                    <option>
-                        <T>dark</T>
-                    </option>
-                    <option>
-                        <T>light</T>
-                    </option>
-                    <option>
-                        <T>system</T>
-                    </option>
-                </select>
-            </div>
+            <Popover className="relative">
+                <PopoverButton className="d-flex flex-row p-2 dark:text-white">{getDarkModelIcont(darkMode)}</PopoverButton>
+                <PopoverPanel
+                    anchor="bottom"
+                    className="flex flex-col bg-stone-800 text-white rounded-md dark:bg-indigo-800 dark:text-white z-50">
+                    <PopoverButton
+                        className="block ext-sm dark:text-gray-200 data-focus:bg-gray-100 data-focus:text-gray-900 p-4 text-white"
+                        onClick={() => changeDarkModel('dark')}>
+                        {getDarkModelIcont('dark')}
+                    </PopoverButton>
+                    <PopoverButton
+                        className="block text-sm dark:text-gray-200 p-4 data-focus:bg-gray-100 data-focus:text-gray-900 text-white"
+                        onClick={() => changeDarkModel('light')}>
+                        {getDarkModelIcont('light')}
+                    </PopoverButton>
+                    <PopoverButton
+                        className="block text-sm dark:text-gray-200 p-4 data-focus:bg-gray-100 data-focus:text-gray-900 text-white"
+                        onClick={() => changeDarkModel('light')}>
+                        {getDarkModelIcont('system')}
+                    </PopoverButton>
+                </PopoverPanel>
+            </Popover>
         </div>
     );
 }

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { TProvider } from '../../i18n';
 import { useNavigate } from 'react-router-dom';
 import SelectDarkMode from '../basic/select-dark-mode';
+import SelectLanguage from '../basic/select-language';
 
 const navigation = [
     { name: 'Product', href: '#' },
@@ -26,7 +27,7 @@ export default function Navigation() {
                         </a>
                     </div>
                     <div className="flex lg:hidden">
-                        <SelectDarkMode />
+                        <SelectDarkMode /> <SelectLanguage />
                     </div>
                     <div className="hidden lg:flex lg:gap-x-12">
                         {/* {navigation.map((item) => (
@@ -35,8 +36,9 @@ export default function Navigation() {
                             </a>
                         ))} */}
                     </div>
-                    <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+                    <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-2">
                         <SelectDarkMode />
+                        <SelectLanguage />
                     </div>
                 </nav>
                 <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
