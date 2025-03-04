@@ -1,6 +1,8 @@
 ﻿{
     "common": {
         "login": "ورود",
-        "register": "ثبت نام"
+        "sign-out": "خروج",
+        "register": "ثبت نام",
+        "signed-out": "خروج انجام شد"
     }
 }

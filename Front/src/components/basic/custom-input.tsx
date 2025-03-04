@@ -21,7 +21,7 @@ function CustomTextInput({ label, ...props }: inputProps) {
             </label>
             <input
                 className={`${
-                    meta.touched && meta.error && errorClassNames
+                    meta.error && errorClassNames
                 } mt-2 focus:outline-1 focus:outline-gray-500 dark:bg-gray-700 outline-0 dark:shadow-sm dark:ring-white/30 dark:text-white leading-flight rounded-md ring-1 ring-inset py-2 px-2 dark:border-0 dark:focus:ring-0 ${
                     !meta.error && 'ring-gray-300 dark:text-gray-300 sm:text-sm'
                 }

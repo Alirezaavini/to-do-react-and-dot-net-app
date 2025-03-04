@@ -18,14 +18,23 @@ import BasicCard from '../../../components/ui/card';
 import BlurBackground from '../../../components/ui/blur-background';
 import CustomTextInput from '../../../components/basic/custom-input';
 import { useLayoutDirection } from '../../../app/LayoutDirectionContext';
+import { useDispatch } from 'react-redux';
+import { userInfoActions } from '../../../app/stores/user-info-slice';
 
 export default function LoginApp() {
     const formRef = useRef<any>(null);
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+
     const onClickLogin = () => {
-        var values = formRef.current.values;
-        console.log(values);
-        navigate('/dashboard');
+        formRef.current.validateForm().then(() => {
+            if (formRef.current.isValid) {
+                var values = formRef.current.values;
+                console.log(values);
+                dispatch(userInfoActions.init({ name: values.name, username: values.username }));
+                navigate('/dashboard');
+            }
+        });
     };
 
     const changeLanguage = () => {
@@ -77,13 +86,12 @@ const LoginForm = ({ formRef }: any) => (
         <Formik
             initialValues={{ username: '', password: '' }}
             validationSchema={Yup.object({
-                username: Yup.string().max(15, 'Must be 15 characters or less').required('Required'),
-                password: Yup.string().max(20, 'Must be 20 characters or less').required('Required'),
+                name: Yup.string().max(15, 'Must be 15 characters or less').required('Required'),
+                username: Yup.string().max(20, 'Must be 20 characters or less').required('Required'),
             })}
             innerRef={formRef}
             onSubmit={(values, { setSubmitting }) => {
                 setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
                     setSubmitting(false);
                 }, 400);
             }}>
@@ -91,7 +99,7 @@ const LoginForm = ({ formRef }: any) => (
                 <Form>
                     <div className="mt-3 mx-3 pb-3 flex flex-col">
                         {/* <span className=" text-gray-500">Username:</span> */}
-                        <CustomTextInput label={<T>username</T>} name="username" type="text" />
+                        <CustomTextInput label={<T>name</T>} name="name" type="text" />
                         {/* <Field
                             name="username"
                             type="text"
@@ -107,7 +115,7 @@ const LoginForm = ({ formRef }: any) => (
                             className="mt-2 shoadow border border-slate-200 text-sm w-full py-2 px-3 text-gray-700 leading-flight rounded-md"
                         />
                         <ErrorMessage name="password" /> */}
-                        <CustomTextInput label={<T>password</T>} name="password" type="password" />
+                        <CustomTextInput label={<T>username</T>} name="username" type="text" />
                     </div>
                 </Form>
             )}

@@ -9,7 +9,7 @@ import { code } from '../components/basic/code';
 import { T } from '../components/basic/text';
 
 ///////////////////////
-let dic = { ...fa };
+let dic = { ...en };
 
 for (const ns_name in dic) {
     dic[ns_name] = { ...dic[ns_name] };

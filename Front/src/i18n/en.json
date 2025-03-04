@@ -1,3 +1,6 @@
 ﻿{
-    "common": {}
+    "common": {
+        "sign-out": "Sign out",
+        "signed-out": "Signed out"
+    }
 }

@@ -6,6 +6,7 @@ import i18next, { TProvider } from './i18n';
 import { useEffect } from 'react';
 import settings from './app/settings';
 import { useLayoutDirection } from './app/LayoutDirectionContext';
+import DashboardLayout from './pages/dashboard/dashboard-layout';
 
 function App() {
     const { toggleDirection } = useLayoutDirection();
@@ -26,7 +27,9 @@ function App() {
                 <Routes>
                     <Route index element={<HomeApp />} />
                     <Route path="/login" element={<LoginApp />} />
-                    <Route path="/dashboard" element={<DashboardApp />} />
+                    <Route path="/" element={<DashboardLayout />}>
+                        <Route path="/dashboard" element={<DashboardApp />} />
+                    </Route>
                 </Routes>
             </BrowserRouter>
         </TProvider>
