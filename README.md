@@ -1,8 +1,8 @@
 <h1 align="center"> To Do App </h1>
 
-### :blue_heart: :purple_heart: React + .Net :blue_heart: :purple_heart:
+<p align="center"> :blue_heart: :purple_heart: <b>React + .Net</b> :blue_heart: :purple_heart: </p>
 
-Here you can find a light sample of how to integrate React and .Net by a simple to do applicaion.
+<p align="center"> Here you can find a light sample of how to integrate React and .Net by a simple to do applicaion. </p>
 
 ⚡ React 19
 
