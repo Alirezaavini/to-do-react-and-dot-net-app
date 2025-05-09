@@ -1,6 +1,9 @@
 ﻿{
     "common": {
         "sign-out": "Sign out",
-        "signed-out": "Signed out"
+        "signed-out": "Signed out",
+        "login": "Login",
+        "register": "Register"
+
     }
 }
