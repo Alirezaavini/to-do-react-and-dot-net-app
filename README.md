@@ -1,4 +1,5 @@
-# To Do - React and Dot Net 
+<h1 align="center"> To Do App </h1>
+
 ### :blue_heart: :purple_heart: React + .Net :blue_heart: :purple_heart:
 
 Here you can find a light sample of how to integrate React and .Net by a simple to do applicaion.
