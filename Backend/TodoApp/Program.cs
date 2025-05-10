@@ -12,8 +12,22 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Register repository
 builder.Services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+
+var cors_origins = new string[]
+                   {
+                          "http://localhost:3000",
+                          "http://localhost:5173"
+                   };
+builder.Services.AddCors(o => o.AddPolicy("react", builder =>
+{
+    builder.WithOrigins(cors_origins)
+        .SetIsOriginAllowedToAllowWildcardSubdomains()
+        .AllowAnyMethod()
+        .AllowCredentials()
+        .AllowAnyHeader();
+}));
+
 
 var app = builder.Build();
 
@@ -25,6 +39,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("react");
 
 app.UseAuthorization();
 

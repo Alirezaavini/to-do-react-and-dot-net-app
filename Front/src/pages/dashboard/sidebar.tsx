@@ -8,12 +8,14 @@ import {
     HomeIcon,
     UsersIcon,
     XMarkIcon,
+    ClipboardIcon,
 } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import { useLayoutDirection } from '../../app/LayoutDirectionContext';
 
 const navigation = [
     { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
+    { name: 'Tasks', href: '/dashboard/tasks', icon: ClipboardIcon, current: false },
     { name: 'Team', href: '#', icon: UsersIcon, current: false },
     { name: 'Projects', href: '#', icon: FolderIcon, current: false },
     { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
@@ -98,7 +100,7 @@ function Sidebar({ sidebarOpen, onChangeSidebar }: SidebarProps) {
                                             ))}
                                         </ul>
                                     </li>
-                                    <li>
+                                    {/* <li>
                                         <div className="text-xs font-semibold leading-6 text-gray-400">Your teams</div>
                                         <ul role="list" className="-mx-2 mt-2 space-y-1">
                                             {teams.map((team) => (
@@ -125,7 +127,7 @@ function Sidebar({ sidebarOpen, onChangeSidebar }: SidebarProps) {
                                                 </li>
                                             ))}
                                         </ul>
-                                    </li>
+                                    </li> */}
                                     <li className="mt-auto">
                                         <a
                                             href="#"
@@ -145,9 +147,9 @@ function Sidebar({ sidebarOpen, onChangeSidebar }: SidebarProps) {
             </Dialog>
 
             {/* Static sidebar for desktop */}
-            <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
+            <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col ">
                 {/* Sidebar component, swap this element with another sidebar if you like */}
-                <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white dark:bg-gray-900  px-6 pb-4">
+                <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-400 bg-white shadow-md dark:bg-gray-900  px-6 pb-4">
                     <div className="flex h-16 shrink-0 items-center">
                         <span className="font-semibold text-indigo-600 text-xl">TO DO</span>
                     </div>
@@ -178,7 +180,7 @@ function Sidebar({ sidebarOpen, onChangeSidebar }: SidebarProps) {
                                     ))}
                                 </ul>
                             </li>
-                            <li>
+                            {/* <li>
                                 <div className="text-xs font-semibold leading-6 text-gray-400">Your teams</div>
                                 <ul role="list" className="-mx-2 mt-2 space-y-1">
                                     {teams.map((team) => (
@@ -205,7 +207,7 @@ function Sidebar({ sidebarOpen, onChangeSidebar }: SidebarProps) {
                                         </li>
                                     ))}
                                 </ul>
-                            </li>
+                            </li> */}
                             <li className="mt-auto">
                                 <a
                                     href="#"

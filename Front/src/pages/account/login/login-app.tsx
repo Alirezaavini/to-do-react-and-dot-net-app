@@ -87,7 +87,7 @@ const LoginForm = ({ formRef }: any) => (
             initialValues={{ username: '', password: '' }}
             validationSchema={Yup.object({
                 name: Yup.string().max(15, 'Must be 15 characters or less').required('Required'),
-                username: Yup.string().max(20, 'Must be 20 characters or less').required('Required'),
+                password: Yup.string().max(20, 'Must be 20 characters or less').required('Required'),
             })}
             innerRef={formRef}
             onSubmit={(values, { setSubmitting }) => {
@@ -115,7 +115,7 @@ const LoginForm = ({ formRef }: any) => (
                             className="mt-2 shoadow border border-slate-200 text-sm w-full py-2 px-3 text-gray-700 leading-flight rounded-md"
                         />
                         <ErrorMessage name="password" /> */}
-                        <CustomTextInput label={<T>username</T>} name="username" type="text" />
+                        <CustomTextInput label={<T>password</T>} name="password" type="password" />
                     </div>
                 </Form>
             )}

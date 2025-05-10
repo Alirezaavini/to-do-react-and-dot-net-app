@@ -8,6 +8,7 @@ import settings from './app/settings';
 import { useLayoutDirection } from './app/LayoutDirectionContext';
 import DashboardLayout from './pages/dashboard/dashboard-layout';
 import Inputs from './components/basic/inputs';
+import TaskListPage from './pages/dashboard/task-list-page';
 
 function App() {
     const { toggleDirection } = useLayoutDirection();
@@ -31,6 +32,7 @@ function App() {
                     <Route path="/inputs" element={<Inputs />} />
                     <Route path="/" element={<DashboardLayout />}>
                         <Route path="/dashboard" element={<DashboardApp />} />
+                        <Route path="/dashboard/tasks" element={<TaskListPage />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

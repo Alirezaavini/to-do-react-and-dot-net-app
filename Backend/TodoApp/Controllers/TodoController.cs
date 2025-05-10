@@ -4,10 +4,12 @@ using TodoApp.Features.CreateTodo;
 using TodoApp.Features.GetTodos;
 using TodoApp.Features.CompleteTodo;
 using TodoApp.Common;
+using Microsoft.AspNetCore.Cors;
 
 namespace TodoApp.Controllers;
 
 [ApiController]
+[EnableCors("react")]
 [Route("api/[controller]")]
 public class TodoController : ControllerBase
 {
@@ -32,6 +34,7 @@ public class TodoController : ControllerBase
         return CreatedAtAction(nameof(GetAll), new { id = result.Result?.Id }, result);
     }
 
+    
     [HttpGet]
     public async Task<Response<List<CreateTodoResponse>>> GetAll()
     {
