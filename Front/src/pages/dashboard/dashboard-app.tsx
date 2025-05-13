@@ -1,57 +1,64 @@
-import { ToDoApi } from '../../api/to-do-api';
+import { toDoApi } from '../../api/to-do-api';
 import { notify } from '../../components/basic/toast';
 import React, { useEffect, useState } from 'react';
 import TaskRow from '../../components/ui/task-row';
 import AddTaskBox from '../../components/ui/add-task-box';
 import { AnimatePresence, motion } from 'framer-motion';
 
-const initialTasks = [
-    { id: 1, title: 'Buy groceries', description: 'Milk, Bread, Eggs, Cheese', completed: false },
-    { id: 2, title: 'Finish project', description: 'Complete the dashboard UI', completed: true },
-    { id: 3, title: 'Call John', description: 'Discuss the new requirements', completed: false },
-];
-
-type TaskType = {
-    id: number;
-    title: string;
-    description: string;
-    completed: boolean;
-};
-
 function DashboardApp() {
     const [tasks, setTasks] = useState<TaskType[]>([]);
     const [loading, setLoading] = useState(false);
-    const [newTask, setNewTask] = useState("");
-
+    const [newTaskTitle, setNewTaskTitle] = useState('');
 
     const handleToggle = (id: number, checked: boolean) => {
-        setTasks((prev) =>
-            prev.map((task) => (task.id === id ? { ...task, completed: checked } : task))
-        );
+        setLoading(true);
+        toDoApi
+            .completeTask(id)
+            .then(() => setTasks((prev) => prev.map((task) => (task.id === id ? { ...task, isCompleted: !task.isCompleted } : task))))
+            .catch(notify.error)
+            .then(() => setLoading(false));
     };
 
-
     const handleAdd = () => {
-        setTasks((prev) => [...prev, { id: prev.length + 1, title: newTask, description: '', completed: false }]);
-        setNewTask('');
+        setLoading(true);
+
+        const newTask: CreateTaskRequestType = {
+            title: newTaskTitle,
+            description: '',
+        };
+        toDoApi
+            .addTask(newTask)
+            .then((res) => setTasks((prev) => [...prev, { id: res.id, title: newTaskTitle, description: '', isCompleted: false }]))
+            .catch(notify.error)
+            .then(() => setLoading(false));
+
+        setNewTaskTitle('');
     };
 
     useEffect(() => {
         setLoading(true);
         setTimeout(() => {
-            ToDoApi.getToDo()
+            toDoApi
+                .getToDo()
                 .then((s) => setTasks(s))
                 .catch(notify.error)
                 .then(() => setLoading(false));
         }, 1000);
     }, []);
 
-    return <>
-        <div className='mb-3'>
-            <AddTaskBox onAdd={handleAdd} value={newTask} onChange={(v) => { setNewTask(v) }} />
-        </div>
+    return (
+        <>
+            <div className="mb-3">
+                <AddTaskBox
+                    loading={loading}
+                    onAdd={handleAdd}
+                    value={newTaskTitle}
+                    onChange={(v) => {
+                        setNewTaskTitle(v);
+                    }}
+                />
+            </div>
 
-        {loading ? <div>Loading...</div> : (
             <AnimatePresence>
                 {tasks.map((task) => (
                     <motion.div
@@ -59,22 +66,20 @@ function DashboardApp() {
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
-                        transition={{ duration: 0.3 }}
-                    >
+                        transition={{ duration: 0.3 }}>
                         <TaskRow
                             id={task.id}
                             title={task.title}
                             description={task.description}
-                            completed={task.completed}
+                            completed={task.isCompleted}
+                            loading={loading}
                             onToggle={(id: number | string, checked: boolean) => handleToggle(Number(id), checked)}
                         />
                     </motion.div>
                 ))}
             </AnimatePresence>
-        )}
-
-    </>
-
+        </>
+    );
 }
 
 export default DashboardApp;
