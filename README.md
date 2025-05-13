@@ -14,7 +14,7 @@
     ✅ Formik (for maiking forms)
     ✅ Yup (for validating values)
      
-⚡ .Net 9
+⚡ .Net 8
 
     ✅ JWT
     ✅ Asyncrounous
