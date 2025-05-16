@@ -23,12 +23,3 @@
     ✅ Rest API
     ✅ Vertical Slice Architecture
     ✅ Data Base: Microsoft SQL Server
-    
-    
-
-### :fire: Using Best Practisces
-
-
-
-
-
