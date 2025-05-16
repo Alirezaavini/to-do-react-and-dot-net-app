@@ -5,4 +5,5 @@ export const toDoApi = {
     getToDo: () => api.call('get', `${apiConfig.toDoUrl}`),
     addTask: (data: CreateTaskRequestType) => api.call('post', `${apiConfig.toDoUrl}`, data),
     completeTask: (id: number) => api.call('post', `${apiConfig.toDoUrl}/${id}/complete`),
+    removeTask: (id: number | string) => api.call('post', `${apiConfig.toDoUrl}/${id}/remove`),
 };

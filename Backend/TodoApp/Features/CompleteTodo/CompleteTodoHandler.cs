@@ -17,8 +17,12 @@ public class CompleteTodoHandler
         var todo = await _repository.GetByIdAsync(command.Id);
         if (todo == null)
             return new Response<CompleteResponse>("Todo not found", "404");
-        todo.IsCompleted = true;
+        todo.IsCompleted = !todo.IsCompleted;
         await _repository.UpdateAsync(todo);
-        return new Response<CompleteResponse>(true);
+        return new Response<CompleteResponse>(new CompleteResponse()
+        {
+            Id = todo.Id,
+            IsCompleted = todo.IsCompleted
+        });
     }
-} 
+}

@@ -5,6 +5,7 @@ using TodoApp.Features.GetTodos;
 using TodoApp.Features.CompleteTodo;
 using TodoApp.Common;
 using Microsoft.AspNetCore.Cors;
+using TodoApp.Features.RemoveTodo;
 
 namespace TodoApp.Controllers;
 
@@ -16,12 +17,14 @@ public class TodoController : ControllerBase
     private readonly CreateTodoHandler _createHandler;
     private readonly GetTodosHandler _getHandler;
     private readonly CompleteTodoHandler _completeHandler;
+    private readonly RemoveTodoHandler _removeHandler;
 
     public TodoController(IRepository<Todo> repository)
     {
         _createHandler = new CreateTodoHandler(repository);
         _getHandler = new GetTodosHandler(repository);
         _completeHandler = new CompleteTodoHandler(repository);
+        _removeHandler = new RemoveTodoHandler(repository);
     }
 
     [HttpPost]
@@ -34,7 +37,7 @@ public class TodoController : ControllerBase
         return CreatedAtAction(nameof(GetAll), new { id = result.Result?.Id }, result);
     }
 
-    
+
     [HttpGet]
     public async Task<Response<List<CreateTodoResponse>>> GetAll()
     {
@@ -47,8 +50,14 @@ public class TodoController : ControllerBase
     {
         var command = new CompleteTodoCommand { Id = id };
         var result = await _completeHandler.HandleAsync(command);
-        if (!result.IsSuccess)
-            return (result);
         return result;
     }
-} 
+
+    [HttpPost("{id}/remove")]
+    public async Task<Response<RemoveResponse>> Remove(int id)
+    {
+        var command = new RemoveTodoCommand { Id = id };
+        var result = await _removeHandler.HandleAsync(command);
+        return result;
+    }
+}

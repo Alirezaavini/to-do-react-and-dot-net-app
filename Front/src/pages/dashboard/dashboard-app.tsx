@@ -18,6 +18,14 @@ function DashboardApp() {
             .catch(notify.error)
             .then(() => setLoading(false));
     };
+    const handleRemove = (id: number | string) => {
+        setLoading(true);
+        toDoApi
+            .removeTask(id)
+            .then(() => setTasks(tasks.filter((x) => x.id != id)))
+            .catch(notify.error)
+            .then(() => setLoading(false));
+    };
 
     const handleAdd = () => {
         setLoading(true);
@@ -74,6 +82,7 @@ function DashboardApp() {
                             completed={task.isCompleted}
                             loading={loading}
                             onToggle={(id: number | string, checked: boolean) => handleToggle(Number(id), checked)}
+                            onRemove={(id: number | string) => handleRemove(id)}
                         />
                     </motion.div>
                 ))}
