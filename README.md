@@ -18,8 +18,9 @@
 
     ✅ JWT
     ✅ Asyncrounous
-    ✅ CQRS
+    ✅ Clean Architecture
     ✅ Entity Framework
     ✅ Rest API
-    ✅ Vertical Slice Architecture
     ✅ Data Base: Microsoft SQL Server
+    ✅ Unit Test
+    
