@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|TodoApp\\TodoApp.csproj|f:\\projects\\programming\\to do\\to-do-react-and-dot-net-app\\backend\\todoapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|TodoApp\\TodoApp.csproj|solutionrelative:todoapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|TodoApp\\TodoApp.csproj|f:\\projects\\programming\\to do\\to-do-react-and-dot-net-app\\backend\\todoapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0E1FC31A-B2B1-B8B9-4A0A-B10C59FB9880}|TodoApp\\TodoApp.csproj|solutionrelative:todoapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0DCD0D51-82AD-4DCA-ACDF-DBD6B3286C07}|test\\ToDoApp.Test.Unit\\ToDoApp.Tests.Unit.csproj|f:\\projects\\programming\\to do\\to-do-react-and-dot-net-app\\backend\\test\\todoapp.test.unit\\services\\todoservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DCD0D51-82AD-4DCA-ACDF-DBD6B3286C07}|test\\ToDoApp.Test.Unit\\ToDoApp.Tests.Unit.csproj|solutionrelative:test\\todoapp.test.unit\\services\\todoservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -42,24 +50,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TodoController.cs",
-              "DocumentMoniker": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\TodoApp\\Controllers\\TodoController.cs",
-              "RelativeDocumentMoniker": "TodoApp\\Controllers\\TodoController.cs",
-              "ToolTip": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\TodoApp\\Controllers\\TodoController.cs",
-              "RelativeToolTip": "TodoApp\\Controllers\\TodoController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAIAwwBAAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T08:11:15.016Z",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\TodoApp\\appsettings.json",
+              "RelativeDocumentMoniker": "TodoApp\\appsettings.json",
+              "ToolTip": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\TodoApp\\appsettings.json",
+              "RelativeToolTip": "TodoApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-06T12:19:23.163Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\TodoApp\\Program.cs",
+              "RelativeDocumentMoniker": "TodoApp\\Program.cs",
+              "ToolTip": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\TodoApp\\Program.cs",
+              "RelativeToolTip": "TodoApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T12:16:38.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CompleteTodoHandler.cs",
               "DocumentMoniker": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\TodoApp\\Features\\CompleteTodo\\CompleteTodoHandler.cs",
               "RelativeDocumentMoniker": "TodoApp\\Features\\CompleteTodo\\CompleteTodoHandler.cs",
@@ -67,12 +88,11 @@
               "RelativeToolTip": "TodoApp\\Features\\CompleteTodo\\CompleteTodoHandler.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T08:10:34.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-06T08:10:34.952Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "CreateTodoHandler.cs",
               "DocumentMoniker": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\TodoApp\\Features\\CreateTodo\\CreateTodoHandler.cs",
               "RelativeDocumentMoniker": "TodoApp\\Features\\CreateTodo\\CreateTodoHandler.cs",
@@ -80,12 +100,11 @@
               "RelativeToolTip": "TodoApp\\Features\\CreateTodo\\CreateTodoHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T07:32:01.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-06T07:32:01.651Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "IRepository.cs",
               "DocumentMoniker": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\TodoApp\\Data\\IRepository.cs",
               "RelativeDocumentMoniker": "TodoApp\\Data\\IRepository.cs",
@@ -93,12 +112,11 @@
               "RelativeToolTip": "TodoApp\\Data\\IRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T07:28:22.679Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-06T07:28:22.679Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "TodoControllerTests.cs",
               "DocumentMoniker": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\test\\ToDoApp.Test.Unit\\Controllers\\TodoControllerTests.cs",
               "RelativeDocumentMoniker": "test\\ToDoApp.Test.Unit\\Controllers\\TodoControllerTests.cs",
@@ -106,25 +124,11 @@
               "RelativeToolTip": "test\\ToDoApp.Test.Unit\\Controllers\\TodoControllerTests.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T07:28:57.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-06T07:28:57.862Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GetTodosHandler.cs",
-              "DocumentMoniker": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\TodoApp\\Features\\GetTodos\\GetTodosHandler.cs",
-              "RelativeDocumentMoniker": "TodoApp\\Features\\GetTodos\\GetTodosHandler.cs",
-              "ToolTip": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\TodoApp\\Features\\GetTodos\\GetTodosHandler.cs",
-              "RelativeToolTip": "TodoApp\\Features\\GetTodos\\GetTodosHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T07:28:15.398Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "EfRepository.cs",
               "DocumentMoniker": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\TodoApp\\Data\\EfRepository.cs",
               "RelativeDocumentMoniker": "TodoApp\\Data\\EfRepository.cs",
@@ -132,21 +136,44 @@
               "RelativeToolTip": "TodoApp\\Data\\EfRepository.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAAAB8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T07:28:07.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-06T07:28:07.504Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "TodoServiceTests.cs",
               "DocumentMoniker": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\test\\ToDoApp.Test.Unit\\Services\\TodoServiceTests.cs",
               "RelativeDocumentMoniker": "test\\ToDoApp.Test.Unit\\Services\\TodoServiceTests.cs",
               "ToolTip": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\test\\ToDoApp.Test.Unit\\Services\\TodoServiceTests.cs",
               "RelativeToolTip": "test\\ToDoApp.Test.Unit\\Services\\TodoServiceTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T07:27:36.833Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TodoController.cs",
+              "DocumentMoniker": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\TodoApp\\Controllers\\TodoController.cs",
+              "RelativeDocumentMoniker": "TodoApp\\Controllers\\TodoController.cs",
+              "ToolTip": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\TodoApp\\Controllers\\TodoController.cs",
+              "RelativeToolTip": "TodoApp\\Controllers\\TodoController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIAwwBAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T08:11:15.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GetTodosHandler.cs",
+              "DocumentMoniker": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\TodoApp\\Features\\GetTodos\\GetTodosHandler.cs",
+              "RelativeDocumentMoniker": "TodoApp\\Features\\GetTodos\\GetTodosHandler.cs",
+              "ToolTip": "F:\\Projects\\Programming\\To Do\\to-do-react-and-dot-net-app\\Backend\\TodoApp\\Features\\GetTodos\\GetTodosHandler.cs",
+              "RelativeToolTip": "TodoApp\\Features\\GetTodos\\GetTodosHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T07:28:15.398Z"
             }
           ]
         }
